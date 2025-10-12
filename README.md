@@ -1,2 +1,3 @@
 # IS477_Course_Project
-Repository for the IS477 final course project for Logan Patterson
+**This is the repository for Logan Patterson's IS 477 Course Project**
+It currently includes an initial project plan for this project which may be updated at a later date.
