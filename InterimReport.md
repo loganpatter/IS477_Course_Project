@@ -9,15 +9,21 @@ The data within this project most closely relates to the USGS Science Data lifec
 Unemployment Rate data was provided by the U.S. Bureau of Labor Statistics via the FRED API, falling into the Public Domain of free use. Each of these datasets does request the usage of a citation, which will be provided below.
 
 U.S. Bureau of Labor Statistics, Unemployment Rate in Dallas County, TX [LAUCN481130000000003A], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/LAUCN481130000000003A, November 14, 2025.
+
 U.S. Bureau of Labor Statistics, Unemployment Rate in Harris County, TX [LAUCN482010000000003A], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/LAUCN482010000000003A, November 14, 2025.
+
 U.S. Bureau of Labor Statistics, Unemployment Rate in El Paso County, TX [LAUCN481410000000003A], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/LAUCN481410000000003A, November 14, 2025.
+
 U.S. Bureau of Labor Statistics, Unemployment Rate in Austin County, TX [TXAUST5URN], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/TXAUST5URN, November 14, 2025.
 
 Estimate Median Household Income data was provided by the U.S. Census Bureau also via the FRED API, which also falls into the Public Domain. These datasets also ask for a citation, which will be below.
 
 U.S. Census Bureau, Estimate of Median Household Income for Dallas County, TX [MHITX48113A052NCEN], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/MHITX48113A052NCEN, November 14, 2025.
+
 U.S. Census Bureau, Estimate of Median Household Income for Harris County, TX [MHITX48201A052NCEN], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/MHITX48201A052NCEN, November 14, 2025.
+
 U.S. Census Bureau, Estimate of Median Household Income for Austin County, TX [MHITX48015A052NCEN], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/MHITX48015A052NCEN, November 14, 2025.
+
 U.S. Census Bureau, Estimate of Median Household Income for El Paso County, TX [MHITX48141A052NCEN], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/MHITX48141A052NCEN, November 14, 2025.
 
 As all of these datasets fall within the public domain of free use and are widely available on the internet, I have no reservations about the usage of this data for exploratory data analysis. There is no identifiable information about specific persons or groups within the dataset, and the people who provided this data already gave consent to the Federal Government to collect, analyze and report said data to the public.
@@ -25,9 +31,9 @@ The High Value dataset on the currently incarcerated inmate population within th
 Texas Department of Criminal Justice, High Value Dataset: August 2025, retrieved from TODP, Texas Open Data Portal; November 14, 2025. https://data.texas.gov/dataset/High-Value-Dataset-August-2025/9b32-yeu6/about_data
 There is some personally identifiable information provided within the dataset that, during data cleaning, I will remove for the purposes of remaining as ethical as possible. These attributes include: SID Number, TDCJ Number, Name and Case Number. These pieces of information will not improve our analysis of this data and only serve to create potential data ethics issues when this data analysis is published again. While this data is openly accessible by any member of the public, I won’t allow my data analysis to be used for predatory or unethical purposes. 
 
-**Data Collection & Acquisition (Complete)**
+**Data Collection & Acquisition (In Process)**
 
-Each dataset related to the Unemployment Rate or Median Household Income for a specific Texas County was pulled from the FRED API, a highly reliable data storage service for Federal Reserve Economic Data, via the requests library in Python.The High Value Dataset was downloaded as a CSV directly from the TODP website which is a similarly highly reliable data curation website provided to the public by the Texas Government, and in the case of this specific dataset, by the Texas Department of Criminal Justice.
+Each dataset related to the Unemployment Rate or Median Household Income for a specific Texas County will be pulled from the FRED API, a highly reliable data storage service for Federal Reserve Economic Data, via the requests library in Python. I have successfully pulled a couple of the datasets from the FRED API that were cited above and will be creating a function to help me pull the rest of these datasets in the next phase of development (See Python Workbook). The High Value Dataset was downloaded as a CSV directly from the TODP website which is a similarly highly reliable data curation website provided to the public by the Texas Government, and in the case of this specific dataset, by the Texas Department of Criminal Justice.
 I currently am only using the FRED API data for 2020-2024 but may change this to a larger subset of time data to allow for more analysis of time trends.
 
 **Storage and Organization (In Process)**
