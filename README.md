@@ -1,5 +1,4 @@
 # IS477_Course_Project
-**This is the repository for Logan Patterson's IS 477 Course Project**
 
 The ProjectPlan.md was the first file added with goals set for the project as a whole.
 
