@@ -71,17 +71,31 @@ More work that I think would be beneficial to this question set would be to inve
 Steps to Reproduce: 
 
 1.Create a new jupyter notebook in an environment of your choice, import pandas, requests and matplotlib [Line 1]
+
 2. Obtain Crime Dataset: Navigate to https://data.texas.gov/dataset/High-Value-Dataset-August-2025/9b32-yeu6/about_data and download the crime dataset as a CSV. Import this file into a python environment and use pandas to turn it into a dataframe. [Line 2]
+
 3. Remove Identifiable Information: Remove the columns SID Number, TDCJ Number, Name and Case Number using the drop function.[Line 3]
-4. Filter Crime Dataset (For Time): Turn the Offense Date column into a datetime object. Replace the Offense Date column with the datetime year of the column (df['Offense Date'].dt.year). Filter the dataframe to only include Offense Dates in 2010 or afterward. [Lines 4 and 5] 
+
+4. Filter Crime Dataset (For Time): Turn the Offense Date column into a datetime object. Replace the Offense Date column with the datetime year of the column (df['Offense Date'].dt.year). Filter the dataframe to only include Offense Dates in 2010 or afterward. [Lines 4 and 5]
+
 5. Filter For Our Four Counties: Create a new dataframe that only includes observations from the County column that match one of ('Harris', 'El Paso', 'Austin', 'Dallas'). [Line 6]
+
 6. Download Filtered Dataframe as CSV: Turn this filtered dataframe (should only have observations from our four counties having occurred in or after 2010) into a csv using pandas and save it to your environment. Download to your machine.
+
 7. Clean Crime Dataset Using OpenRefine: Import the county and year filtered CSV into OpenRefine and use ALL the clustering functions on the TDCJ Offense column to help clean the messy data in this column. Once done, save this file as a CSV and import it into a python environment. Use pandas to turn it into a dataframe. [Line 7 and 8]
+
 8. Filter by Crime Type: Create 2 new dataframes from your clean crime dataset using the str.contains() function and the keywords ('agg', 'murd', 'kidnap', 'sex', 'slaughter') for the violence dataframe [Line 9] and ('rob', 'burg', 'steal', 'theft') for the theft dataframe. You will need to use a regex pattern of '|'.join(keywords) for the contains function. [Line 10]
+
 9. Filter by County: A new dataframe for each county will be needed for each crime type (8 total, for example Harris_Violent and Austin_Theft are two of them). Filter the Crime Type dataframes by county and create new dataframes, one for each county. You will have 2 dataframes for each county, one for violent crimes and the other for theft crimes. [Lines 22 and 23]
+
 10. Plot Theft Crime Over Time By County: Two plots will be needed here, one for Harris/Dallas and the other for El Paso/Austin. Using your theft_county dataframes, use matplotlib to create two timeplots, grouping by the count of Offense Date for the y-axis and the year for the x-axis, one including the Harris and Dallas filtered datasets and the other including the El Paso and Austin datasets. [Lines 24 and 25]
+
 11. Plot Violent Crime Over Time By County: Two plots will be needed here, one for Harris/Dallas and the other for El Paso/Austin. Using your violent_county dataframes, use matplotlib to create two timeplots, grouping by the count of Offense Date for the y-axis and the year for the x-axis, one including the Harris and Dallas filtered datasets and the other including the El Paso and Austin datasets. [Lines 26 and 27]
+
 12. Obtain Economic Indicator Datasets: Use the requests library to pull the median household income and unemployment rate datasets for Harris, El Paso, Dallas and Austin counties from their FRED API series using your API Key (https://fredaccount.stlouisfed.org/login/secure/ login here to access your key) and the series ID of the data (LAUCN481130000000003A, LAUCN482010000000003A, LAUCN481410000000003A, LAUCN480150000000003A, MHITX48113A052NCEN, MHITX48201A052NCEN, MHITX48015A052NCEN, MHITX48141A052NCEN). Pull this as a JSON file from the start date of 2010-01-01 and the end date of 2025-01-01. Use pandas to turn each of these datasets into a dataframe. [Lines 11 and 12]
+
 13. Process Econ Datasets: Convert the date column to a datetime object using pandas and drop the 'realtime_start' and realtime-end' columns. Rename the 'value' column to be the correct indicator (unemployment or median household income). Add a column labeled 'county' with the correct county for the series you pulled. [Lines 11, 12 and 15]
+
 14. Merge Econ Datasets: Use pandas to merge all 8 of your preprocessed Econ datasets with an 'outer' merge. [Lines 13, 14, 16 and 17]
+
 15. Create Median House Income & Unemployment Rate Plots: Use matplotlib to create time plots from your merged Econ dataset (one for each of your economic indicators) making sure to group by the county column on the. You should get two plots with four distinct lines over time, one for each county. The y-axis should be your economic indicator and the x-axis should be time. [Lines 20 and 21]
