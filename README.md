@@ -10,6 +10,8 @@ Project Title: Relationship Between Crime, Median Household Income and Unemploym
 
 Project Contributors: Logan Patterson
 
+Box Folder Link: https://uofi.box.com/s/klw3w7aewy57ifsx9nvpnfpg0mk55uub
+
 **Summary:**
 
 The overall goal of this project was to explore publicly available data amongst several Texas counties in order to determine what kind of relationship existed, if any, between the crime rate of the area and the median household income and unemployment rate of the same area. Texas has some of the best publicly available data portals of any state in the US, which was the main motivation behind using the datasets seen in this project. In regards to median household income being a financial factor examined, I figured this number would give a quick snapshot of the overall income levels of an area, but won't skew easily like average household income might. Unemployment rate was chosen since I figured the higher the unemployment rate, the more likely individuals may turn to crime to make up for a lack of income. I looked at the counties of Harris, El Paso, Austin and Dallas in specific in this project for no reason other than the fact that these were counties I had heard of in the past, so I figured most other people who interact with this data will have heard of at least one of them as well. The driving research questions for this project were as follows:
