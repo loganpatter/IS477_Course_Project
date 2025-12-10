@@ -101,3 +101,23 @@ More work that I think would be beneficial to this question set would be to inve
 14. Merge Econ Datasets: Use pandas to merge all 8 of your preprocessed Econ datasets with an 'outer' merge. [Lines 13, 14, 16 and 17]
 
 15. Create Median House Income & Unemployment Rate Plots: Use matplotlib to create time plots from your merged Econ dataset (one for each of your economic indicators) making sure to group by the county column on the. You should get two plots with four distinct lines over time, one for each county. The y-axis should be your economic indicator and the x-axis should be time. [Lines 20 and 21]
+
+**Citations**
+
+U.S. Bureau of Labor Statistics, Unemployment Rate in Dallas County, TX [LAUCN481130000000003A], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/LAUCN481130000000003A, November 14, 2025.
+
+U.S. Bureau of Labor Statistics, Unemployment Rate in Harris County, TX [LAUCN482010000000003A], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/LAUCN482010000000003A, November 14, 2025.
+
+U.S. Bureau of Labor Statistics, Unemployment Rate in El Paso County, TX [LAUCN481410000000003A], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/LAUCN481410000000003A, November 14, 2025.
+
+U.S. Bureau of Labor Statistics, Unemployment Rate in Austin County, TX [LAUCN480150000000003A], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/LAUCN480150000000003A, November 14, 2025.
+
+U.S. Census Bureau, Estimate of Median Household Income for Dallas County, TX [MHITX48113A052NCEN], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/MHITX48113A052NCEN, November 14, 2025.
+
+U.S. Census Bureau, Estimate of Median Household Income for Harris County, TX [MHITX48201A052NCEN], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/MHITX48201A052NCEN, November 14, 2025.
+
+U.S. Census Bureau, Estimate of Median Household Income for Austin County, TX [MHITX48015A052NCEN], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/MHITX48015A052NCEN, November 14, 2025.
+
+U.S. Census Bureau, Estimate of Median Household Income for El Paso County, TX [MHITX48141A052NCEN], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/MHITX48141A052NCEN, November 14, 2025.
+
+Texas Department of Criminal Justice, High Value Dataset: August 2025, retrieved from TODP, Texas Open Data Portal; November 14, 2025. https://data.texas.gov/dataset/High-Value-Dataset-August-2025/9b32-yeu6/about_data
