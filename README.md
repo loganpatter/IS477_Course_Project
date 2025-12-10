@@ -72,7 +72,7 @@ More work that I think would be beneficial to this question set would be to inve
 
 *Please see Final_Workbook.ipynb for reference lines*
 
-1.Create a new jupyter notebook in an environment of your choice, import pandas, requests and matplotlib [Line 1]
+1. Create a new jupyter notebook in an environment of your choice, import pandas, requests and matplotlib [Line 1]
 
 2. Obtain Crime Dataset: Navigate to https://data.texas.gov/dataset/High-Value-Dataset-August-2025/9b32-yeu6/about_data and download the crime dataset as a CSV. Import this file into a python environment and use pandas to turn it into a dataframe. [Line 2]
 
