@@ -70,7 +70,7 @@ More work that I think would be beneficial to this question set would be to inve
 
 **Steps to Reproduce:**
 
-*Please see Final_Workbook.ipynb for reference lines*
+*Please see [Final_Workbook.ipynb](Final_Workbook.ipynb) for reference lines*
 
 1. Create a new jupyter notebook in an environment of your choice, import pandas, requests and matplotlib [Line 1]
 
