@@ -10,7 +10,7 @@ Project Title: Relationship Between Crime, Median Household Income and Unemploym
 
 Project Contributors: Logan Patterson
 
-Summary: 
+**Summary:**
 
 The overall goal of this project was to explore publicly available data amongst several Texas counties in order to determine what kind of relationship existed, if any, between the crime rate of the area and the median household income and unemployment rate of the same area. Texas has some of the best publicly available data portals of any state in the US, which was the main motivation behind using the datasets seen in this project. In regards to median household income being a financial factor examined, I figured this number would give a quick snapshot of the overall income levels of an area, but won't skew easily like average household income might. Unemployment rate was chosen since I figured the higher the unemployment rate, the more likely individuals may turn to crime to make up for a lack of income. I looked at the counties of Harris, El Paso, Austin and Dallas in specific in this project for no reason other than the fact that these were counties I had heard of in the past, so I figured most other people who interact with this data will have heard of at least one of them as well. The driving research questions for this project were as follows:
 
@@ -24,7 +24,7 @@ For the High Value Dataset from the TODP, which includes the currently incarcera
 
 With my final exploration datasets and subsets created, I was able to visualize trends over time between both economic indicators and both crime types. Results will be further discussed in the results section of this report. 
 
-Data Profile: 
+**Data Profile:**
 
 Unemployment Rate data was provided by the U.S. Bureau of Labor Statistics via the FRED API, falling into the Public Domain of free use. Each of these datasets does request the usage of a citation, which will be provided in the references section. These datasets could either be queried as monthly or yearly aggregates of data, and I chose to examine yearly trends instead of monthly ones to allow for a more longitudinal examination of observations. The original datasets when first pulled from the FRED API included the following columns: realtime_start, realtime_end, date and value. Realtime_start and realtime_end simply display the date the data was accessed by the user, so I removed these unnecessary columns. The date column contained a year-month-day object which I converted into a datetime object to create time series graphs later in the analysis pipeline. I also renamed the 'value' column to the correct economic indicator, which in this case was 'Unemployment Rate'.
 
@@ -36,7 +36,7 @@ The High Value dataset on the currently incarcerated inmate population within th
 
 There is some personally identifiable information provided within the dataset that, during data cleaning, will be removed for the purposes of remaining as ethical as possible. These attributes include: SID Number, TDCJ Number, Name and Case Number. These pieces of information will not improve our analysis of this data and only serve to create potential data ethics issues when this data analysis is published again. While this data is openly accessible by any member of the public, I won’t allow my data analysis to be used for predatory or unethical purposes. 
 
-Data Quality: 
+**Data Quality:**
 
 The economic indicator datasets pulled from the FRED API all score prefectly in all data quality categories, so the assessment below will focus on the inmate crime dataset rather than the other FRED datasets.
 
@@ -48,7 +48,7 @@ Consistency: The Current Texas Inmate Information dataset is highly consistent i
 
 Timeliness: This dataset is updated very frequently (monthly) with accurate metadata describing when these updates happen. While there are occasional changes to criminal charging codes, these changes are properly documented as well, allowing for those who view and use the dataset to accurately accommodate for these updates. While it would be nice for the providers of the data to make any required changes in the data in regards to changes to laws and crime codes, at least they inform users of these changes instead of simply ignoring them.
 
-Findings:
+**Findings:**
 
 As described previously, I chose to focus on a few specific subsets of data for my analysis. The first decision I made was to only inspect data from 2010 onwards. Some of the FRED API datasets were only available from 2010 and onward, so rather than introduce possible issues with differing time ranges for different datasets, I decided to cut all FRED datasets to only include between 2010 and 2024 when I pulled them from the API. For the crime dataset I was able to simply filter the dataset to only include crimes that were commited from 2010 onward after changing the exact date of offense column to a year of offense instead. In addition to only looking at data after 2010, I also split crime data into two categories: violent/sexual and theft, as described in the project summary. The violence/sexual crime subset included crimes in the categories aggravated, murder, kidnapping, sexual assault and any kind of slaughter while the theft crimes subset included robberies, burglaries and crimes described as stealing or theft. 
 
@@ -60,7 +60,7 @@ Theft crime after 2010 in all four counties had a relatively positive, shallow s
 
 While the median household income for each county and both violent and theft crimes had overall positive slopes, I don't think it's fair to correlate an increase in household income with an increase in crime rate for a few reasons. The biggest issue with drawing a conclusionary relationship between these factors relates to the possibility of population numbers increasing in this time frame as well, which we did not account for. With more people living in the same place, crime rates inevitably increase as well. So, while there is a possibility of a relationship existing between these factors, it can't be determined here beyond acknowledging it as a possibility. As for violent crimes in relation to unemployment rates, I think this analysis provides slightly more confidence in drawing a positive relationship between these two factors. While the peak in unemployment occured in 2020 with a sharp dropoff afterward, peaks were seen in violent crimes in the following years, with similar immediate dropoffs as well. While these peaks do not coincide exactly in the same year, my thinking is its possible that many individuals did not feel the effects of unemployment right away with savings and high amounts of federal aid during the time, but did feel it in following years, potentially a contributing factor in an increase of violent crimes. With two identical increases and immediate decreases, just a year or so apart, an argument could be made that there is some kind of positive relationship between these two factors, though causality obviously cannot be determined with so little data and testing. 
 
-Lessons & Future Work:
+**Lessons & Future Work:**
 
 The biggest takeaway I had from this project was the ability to work with data that is not directly downloaded and imported into a python notebook. Before this class, I had never worked with anyting other than CSV or JSON files, which could easily be translated into pandas dataframes for analysis and visualization. With the requirement to access datasets using at least two unique methods, I was forced to get out of my comfort zone and learn how to use a new system, that being API's. In all honesty, I didn't appreciate how helpful API's can be when carrying out a project such as this at first. Since you could easily download the data as a CSV and then work with it in pandas with no overhead, I figured that would always be the best course of action. With a greater understanding of how these data querying processes happen and the use cases of them, I can now confidently say that downloading and importing a CSV file is not always the correct solution in the data science pipeline. For starters, not using data housed in a CSV allows for much more versatility by the user. API's have their own constraints such as the amount of data that can be downloaded by a single user at a time and other issues that need to be worked around, but their ease of use in a new program is extremely nice. Instead of needing to download the CSV and then have it pulled into the program before anything else can happen with the data, a pull request can be issued and the data is right there, ready to be used. This seems like a fantastic solution to data acquisition when the program will be distributed to many people, lessening the size of the program initially, allowing it to travel faster and be used by others more quickly. 
 
@@ -68,7 +68,9 @@ Another large takeaway from this class and this project specifically was how ama
 
 More work that I think would be beneficial to this question set would be to investigate changes in crime proportions instead of just crime numbers. While exact crime numbers in a year can offer insight into trends over time, I believe proportions in addition to specific numbers could offer even better insight. Proportions could help account for lower crime numbers overall in a given year, for example if violent crime stayed the same but made up a larger proportion of all crime commited in that year, that may be a signal of a relationship concrete numbers alone cannot provide. In addition to this, getting yearly census data on the counties in question would be invaluable for this exploratory data analysis. As I stated in my results category, there is a possibility that more people are moving to an area every year, which could be a driving factor in an increase in crime rates, but since we don't have that data, it's impossible to say. Unfortunately, yearly census data like this is either not reported or is not as publicly accessible as the datasets I used, but if the data does exist, a government group could likely gain access to it and determine how much of an impact population numbers have on crime statistics over time.
 
-Steps to Reproduce: 
+**Steps to Reproduce:**
+
+*Please see Final_Workbook.ipynb for reference lines*
 
 1.Create a new jupyter notebook in an environment of your choice, import pandas, requests and matplotlib [Line 1]
 
